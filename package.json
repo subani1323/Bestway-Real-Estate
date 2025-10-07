@@ -1,0 +1,33 @@
+{
+  "name": "bestway-real-estate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run start --prefix frontend",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:start:prod": "pm2 start ecosystem.config.js --env production",
+    "pm2:stop": "pm2 stop all",
+    "pm2:restart": "pm2 restart all",
+    "pm2:delete": "pm2 delete all",
+    "pm2:logs": "pm2 logs",
+    "deploy:prod": "npm run build && pm2 restart ecosystem.config.js --env production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thushan99/savemax-realty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thushan99/savemax-realty/issues"
+  },
+  "homepage": "https://github.com/thushan99/savemax-realty#readme",
+  "description": "",
+  "dependencies": {
+    "nodemailer": "^7.0.6"
+  }
+}

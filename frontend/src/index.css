@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Print-specific styles for ledger reports */
+@media print {
+  .ledger-table th,
+  .ledger-table td {
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+    padding: 2px 4px !important;
+  }
+
+  .ledger-table th {
+    font-weight: 600 !important;
+    text-align: center !important;
+  }
+
+  .ledger-table .type-badge {
+    font-size: 8px !important;
+    padding: 1px 2px !important;
+  }
+
+  /* Ensure data alignment is preserved in print */
+  .ledger-table td.text-left {
+    text-align: left !important;
+  }
+  .ledger-table td.text-center {
+    text-align: center !important;
+  }
+  .ledger-table td.text-right {
+    text-align: right !important;
+  }
+
+  /* Adjust column widths for print */
+  /* Account Name - increased width */
+  .ledger-table th:nth-child(2),
+  .ledger-table td:nth-child(2) {
+    min-width: 200px !important;
+    width: 200px !important;
+  }
+
+  /* Description - increased width */
+  .ledger-table th:nth-child(5),
+  .ledger-table td:nth-child(5) {
+    min-width: 300px !important;
+    width: 300px !important;
+  }
+
+  /* Reference - narrow */
+  .ledger-table th:nth-child(4),
+  .ledger-table td:nth-child(4) {
+    min-width: 80px !important;
+    width: 80px !important;
+  }
+
+  /* Debit - medium narrow */
+  .ledger-table th:nth-child(6),
+  .ledger-table td:nth-child(6) {
+    min-width: 100px !important;
+    width: 100px !important;
+  }
+
+  /* Credit - medium narrow */
+  .ledger-table th:nth-child(7),
+  .ledger-table td:nth-child(7) {
+    min-width: 100px !important;
+    width: 100px !important;
+  }
+
+  /* Balance - medium narrow */
+  .ledger-table th:nth-child(8),
+  .ledger-table td:nth-child(8) {
+    min-width: 100px !important;
+    width: 100px !important;
+  }
+}
